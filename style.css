@@ -14,6 +14,12 @@
     background-position: center center;
 }
 
+.app2 {
+    max-width: auto;
+    width: 100vw;
+    height: 100vh;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -25,6 +31,7 @@ body {
     font-family: "Roboto", sans-serif;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 h1 {
@@ -37,7 +44,29 @@ h1 {
     min-width: 300px;
     top: calc(20vh + 20px);
     left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 50px;
+}
+
+.content2 {
+    position: absolute;
+    width: 60%;
+    min-width: 300px;
+    bottom: 20px;
+    left: 50%;
     transform: translate(-50%, 0);
+    padding-top: 50px;
+    z-index: 10;
+}
+
+.app2 img {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    /* object-fit: cover; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .clock {
@@ -46,7 +75,7 @@ h1 {
     height: 150px;
     font-weight: bold;
     color: #ff5555;
-    font-size: 70px;
+    font-size: 100px;
     line-height: 17.4vh;
     display: flex;
     position: relative;
@@ -78,6 +107,7 @@ h1 {
 
 .tick {
     line-height: 17vh;
+    margin: 0 1rem;
 }
 
 .tick-hidden {
