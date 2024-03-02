@@ -3,22 +3,25 @@ var minutesContainer = document.querySelector('.minutes')
 var secondsContainer = document.querySelector('.seconds')
 var tickElements = Array.from(document.querySelectorAll('.tick'))
 
-var diff = new Date(new Date('04/03/2024 08:00:00') - Date.now());
-
-// console.log(diff.getHours(), diff.getMinutes(), diff.getSeconds());
-
-var last = new Date(0)
-last.setUTCHours(-1)
-
 var tickState = true
- 
-var lastTime = {
-    hours: diff.getHours(),
-    mins: diff.getMinutes(),
-    seconds: diff.getSeconds()
-}
 
 function updateTime() {
+    var diff = new Date('03/04/2024 08:00:00') - Date.now();
+    
+    var totalSeconds = parseInt(diff / 1000);
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    var last = new Date(0)
+    last.setUTCHours(-1)
+
+    var lastTime = {
+        hours: hours,
+        mins: minutes,
+        seconds: seconds
+    }
+
     var now = { ...lastTime }
 
     now.seconds -= 1;
@@ -91,4 +94,4 @@ function updateNumber(element, number) {
     }, 990)
 }
 
-setInterval(updateTime, 1000)
+setInterval(updateTime, 500)
