@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.app {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0;
+    background-image: url('images/z5208246784120_9390af347ae41c78465e6fc643f33127.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+.content {
+    position: absolute;
+    width: 60%;
+    min-width: 300px;
+    top: calc(20vh + 20px);
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.clock {
+    font-family: "Kanit", sans-serif;
+    width: max-content;
+    height: 150px;
+    font-weight: bold;
+    color: #ff5555;
+    font-size: 70px;
+    line-height: 17.4vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    left: 0;
+    transform: translate(0, -30px);
+    width: 100%;
+    justify-content: center;
+}
+
+/* .clock::before,
+.clock::after {
+    content: '';
+    width: 7ch;
+    height: 1vh;
+    background: linear-gradient(to top, transparent, white);
+    position: absolute;
+    z-index: 2;
+}
+
+.clock::after {
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent, white);
+} */
+
+.clock>div {
+    display: flex;
+}
+
+.tick {
+    line-height: 17vh;
+}
+
+.tick-hidden {
+    opacity: 0;
+}
