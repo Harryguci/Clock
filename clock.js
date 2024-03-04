@@ -36,7 +36,7 @@ function updateTime() {
         now.hours -= 1;
     }
 
-    if (now.hours <= 0) {
+    if (now.hours <= 0 && now.mins <= 0 && now.seconds <= 0) {
         return window.alert('Hết Giờ');
     }
 
