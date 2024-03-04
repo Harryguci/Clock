@@ -36,8 +36,12 @@ function updateTime() {
         now.hours -= 1;
     }
 
-    if (now.hours <= 0 && now.mins <= 0 && now.seconds <= 0) {
-        return window.alert('Hết Giờ');
+    if (now.hours <= 0 || now.mins <= 0 || now.seconds <= 0) {
+        // window.alert('Hết Giờ');
+        updateContainer(hoursContainer, '00');
+        updateContainer(minutesContainer, '00');
+        updateContainer(secondsContainer, '00');
+        return;
     }
 
     if (last.hours !== now.hours) {
