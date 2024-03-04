@@ -7,7 +7,7 @@ var tickState = true
 
 function updateTime() {
     var diff = new Date('03/04/2024 08:00:00') - Date.now();
-    
+
     var totalSeconds = parseInt(diff / 1000);
     const hours = Math.floor(totalSeconds / 3600);
     const minutes = Math.floor((totalSeconds % 3600) / 60);
@@ -36,7 +36,7 @@ function updateTime() {
         now.hours -= 1;
     }
 
-    if (now.hours <= 0 || now.mins <= 0 || now.seconds <= 0) {
+    if (now.hours < 0 || now.mins < 0 || now.seconds < 0) {
         // window.alert('Hết Giờ');
         updateContainer(hoursContainer, '00');
         updateContainer(minutesContainer, '00');
